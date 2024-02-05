@@ -1,16 +1,19 @@
 import React from 'react';
-import Header from './components/Header/Header';
-import Products from './components/Products/Products';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Provider from './context/Provider';
-import Cart from './components/Cart/Cart';
+import Home from './screens/Home/Home';
+import Order from './screens/Order/Order';
 
 function App() {
 
   return (
     <Provider>
-      <Header />
-      <Products />
-      <Cart />
+      <Router>
+        <Routes>
+          <Route path="/" Component={Home}/>
+          <Route path="/order" Component={Order}/>
+        </Routes>
+      </Router>
     </Provider>
   );
 }

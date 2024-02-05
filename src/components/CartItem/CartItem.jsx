@@ -6,7 +6,7 @@ import './CartItem.css';
 import formatCurrency from '../../utils/formatCurrency';
 import AppContext from '../../context/AppContext';
 
-function CartItem({ data }) {
+function CartItem({ data, remove_button }) {
 
   const { cartItems, setCartItems } = useContext(AppContext);
   const { id, thumbnail, title, price } = data;
@@ -28,13 +28,18 @@ function CartItem({ data }) {
         <h3 className="cart-item-title">{title}</h3>
         <h3 className="cart-item-price">{formatCurrency(price, 'BRL')}</h3>
 
-        <button
+        {remove_button ? <button
           type="button"
           className="button__remove-item"
           onClick={ handleRemoveItem }
         >
           <BsCartDashFill />
         </button>
+
+          :
+        
+          <></>
+        }
       </div>
     </section>
   );
@@ -43,5 +48,6 @@ function CartItem({ data }) {
 export default CartItem;
 
 CartItem.propTypes = {
-  data: propTypes.object
+  data: propTypes.object,
+  remove_button: Boolean
 }.isRequired;
