@@ -4,7 +4,7 @@ import QRCode from 'react-qr-code';
 import './QrCode.css';
 
 export default function QrCode() {
-  const url = 'deixar assim por enquanto';
+  const url = 'https://shopping-payment.vercel.app/payment';
 
   return(
     <section>
