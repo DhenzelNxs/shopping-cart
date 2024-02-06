@@ -6,8 +6,12 @@ import { FaPix, FaRegCreditCard } from 'react-icons/fa6';
 
 import './Order.css';
 export default function Order() {
-  const { cartItems } = useContext(AppContext);
+  const { cartItems, navigate } = useContext(AppContext);
   const totalPrice = cartItems.reduce((acc, item) => item.price + acc, 0);
+
+  const toQrCode = () => {
+    navigate('/qrcode');
+  };
 
   return(
     <section className="order-container">
@@ -20,8 +24,8 @@ export default function Order() {
       <div className="payment-method">
         Formas de Pagamento:
         <div className="payment-info">
-          <FaPix size={30} color="#00ffff"/> PIX
-          <FaRegCreditCard size={30} /> Cartão de Crédito
+          <FaPix className="Payment-icon" size={30} color="#00ffff" onClick={() => toQrCode()}/> PIX
+          <FaRegCreditCard className="Payment-icon" size={30}/> Cartão de Crédito
         </div>
       </div>
 

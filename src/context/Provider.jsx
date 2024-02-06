@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import propTypes from 'prop-types';
 import AppContext from './AppContext';
+import { useNavigate } from 'react-router-dom';
 
 function Provider({ children }) {
 
@@ -8,6 +9,7 @@ function Provider({ children }) {
   const [cartItems, setCartItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isCartVisible, setIsCartVisible] = useState(false);
+  const navigate = useNavigate();
 
   const value = {
     products,
@@ -18,6 +20,7 @@ function Provider({ children }) {
     setCartItems,
     isCartVisible,
     setIsCartVisible,
+    navigate,
   };
 
   return (
