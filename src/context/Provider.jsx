@@ -10,6 +10,11 @@ function Provider({ children }) {
   const [loading, setLoading] = useState(true);
   const [isCartVisible, setIsCartVisible] = useState(false);
   const navigate = useNavigate();
+  const ScreenTokens = {
+    Order: 'IDJIPJAINOV9828',
+    Payment: 'APOJAINFIBANO8',
+    QrCode: 'JHSUHF79293HIIFH',
+  };
 
   const value = {
     products,
@@ -21,6 +26,7 @@ function Provider({ children }) {
     isCartVisible,
     setIsCartVisible,
     navigate,
+    ScreenTokens,
   };
 
   return (

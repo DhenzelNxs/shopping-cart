@@ -1,10 +1,14 @@
 import React from 'react';
 import QRCode from 'react-qr-code';
+import { useContext } from 'react';
+import AppContext from '../../context/AppContext';
 
 import './QrCode.css';
 
 export default function QrCode() {
-  const url = 'https://shopping-payment.vercel.app/payment';
+  const { ScreenTokens} = useContext(AppContext);
+
+  const url = 'https://shopping-payment.vercel.app/payment-' + ScreenTokens.Payment;
 
   return(
     <section>

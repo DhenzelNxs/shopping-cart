@@ -6,11 +6,11 @@ import { FaPix, FaRegCreditCard } from 'react-icons/fa6';
 
 import './Order.css';
 export default function Order() {
-  const { cartItems, navigate } = useContext(AppContext);
+  const { cartItems, navigate, ScreenTokens } = useContext(AppContext);
   const totalPrice = cartItems.reduce((acc, item) => item.price + acc, 0);
 
   const toQrCode = () => {
-    navigate('/qrcode');
+    navigate('/qrcode-' + ScreenTokens.QrCode);
   };
 
   return(

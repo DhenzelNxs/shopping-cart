@@ -5,13 +5,13 @@ import AppContext from '../../context/AppContext';
 import formatCurrency from '../../utils/formatCurrency';
 
 function Cart() {
-  const { cartItems, isCartVisible, navigate } = useContext(AppContext);
+  const { cartItems, isCartVisible, navigate, ScreenTokens } = useContext(AppContext);
 
   const totalPrice = cartItems.reduce((acc, item) => item.price + acc, 0);
 
   const toOrderScreen = () => {
     if (totalPrice > 0) {
-      navigate('/order');
+      navigate('/order-' + ScreenTokens.Order);
     }else {
       alert('Não há produtos no carrinho');
     }
