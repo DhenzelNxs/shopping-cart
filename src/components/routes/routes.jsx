@@ -6,6 +6,7 @@ import QrCode from '../../screens/QrCode/QrCode';
 import Payment from '../../screens/Payment/Payment';
 import { useContext } from 'react';
 import AppContext from '../../context/AppContext';
+import NotFound from '../../screens/NotFound/NotFound';
 
 function AppRouter() {
 
@@ -17,6 +18,7 @@ function AppRouter() {
       <Route path={'/order-' + ScreenTokens.Order} Component={Order}/>
       <Route path={'/qrcode-' + ScreenTokens.QrCode} Component={QrCode} />
       <Route path={'/payment-' + ScreenTokens.Payment} Component={Payment} />
+      <Route path="*" Component={NotFound} />
     </Routes>
   );
 }
