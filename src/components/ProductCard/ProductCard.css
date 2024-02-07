@@ -58,7 +58,7 @@
   display: flex;
 }
 
-@media (min-height: 740px) {
+@media (max-width: 1024px) {
   .button__add-cart {
     display: flex;
   }
