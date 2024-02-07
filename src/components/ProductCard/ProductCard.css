@@ -57,3 +57,9 @@
 .product-card:hover .button__add-cart {
   display: flex;
 }
+
+@media (min-height: 740px) {
+  .button__add-cart {
+    display: flex;
+  }
+}

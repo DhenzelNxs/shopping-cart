@@ -6,7 +6,7 @@ import ProductCard from '../ProductCard/ProductCard';
 import Loading from '../Loading/Loading';
 import AppContext from '../../context/AppContext';
 
-function Products() {
+export default function Products() {
 
   const { products, setProducts, loading, setLoading } = useContext(AppContext);
   
@@ -27,5 +27,3 @@ function Products() {
     
   );
 }
-
-export default Products;
