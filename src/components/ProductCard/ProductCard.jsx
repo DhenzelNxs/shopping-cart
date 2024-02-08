@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import propTypes from 'prop-types';
 import { BsFillCartPlusFill } from 'react-icons/bs';
 
@@ -10,11 +10,35 @@ function ProductCard({ data }) {
   const { title, thumbnail, price } = data;
 
   const { cartItems, setCartItems } = useContext(AppContext);
+  const [showModal, setShowModal] = useState(false);
 
-  const handleAddCart = () => setCartItems([ ...cartItems, data ]);
+  const handleAddCart = () => {
+    setShowModal(true);
+  };
+
+  const handleConfirmAdd = () => {
+    setCartItems([...cartItems, data]);
+    setShowModal(false);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
 
   return (
     <section className="product-card">
+
+      {showModal && (
+        <div className="modal">
+          <div className="modal-content">
+            <p>Deseja adicionar este item ao carrinho?</p>
+            <div>
+              <button type="button" onClick={handleConfirmAdd}>Sim</button>
+              <button type="button" onClick={handleCloseModal}>Cancelar</button>
+            </div>
+          </div>
+        </div>
+      )}
       
       <img
         src={thumbnail.replace(/\w\.jpg/gi, 'W.jpg')}

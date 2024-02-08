@@ -12,7 +12,7 @@ export default function Products() {
   
 
   useEffect(() => {
-    fetchProducts('iphone').then((response) => {
+    fetchProducts('mais relevantes').then((response) => {
       setProducts(response);
       setLoading(false);
     });
