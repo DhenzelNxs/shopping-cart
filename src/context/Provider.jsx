@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 function Provider({ children }) {
 
   const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [cartItems, setCartItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isCartVisible, setIsCartVisible] = useState(false);
@@ -19,6 +20,8 @@ function Provider({ children }) {
   const value = {
     products,
     setProducts,
+    categories,
+    setCategories,
     loading,
     setLoading,
     cartItems,

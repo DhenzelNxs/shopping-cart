@@ -1,0 +1,8 @@
+.item-button {
+  border-width: 1;
+  border-color: #f3eca4;
+  background-color: #f3eca4;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
