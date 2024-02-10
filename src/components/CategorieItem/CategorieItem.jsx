@@ -22,9 +22,7 @@ export default function CategorieItem({data}) {
   
   return(
     <button className="item-button" onClick={() => {handleSearch();}}>
-      <h4>
-        {name}
-      </h4>
+      {name}
     </button>   
   );
 }

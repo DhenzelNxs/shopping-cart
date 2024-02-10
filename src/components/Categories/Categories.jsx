@@ -20,9 +20,9 @@ export default function Categories() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 7
-  };
+    slidesToShow: 4,
+    slidesToScroll: 4
+  };  
 
   return (
     !loading && (

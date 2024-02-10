@@ -8,3 +8,21 @@
 .slider-items {
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .categories {
+    padding: 120px 20px 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .categories {
+    padding: 120px 20px 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 20px;
+  }
+}
