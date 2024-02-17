@@ -13,6 +13,7 @@ export default function Categories() {
   useEffect(() => {
     fetchCategories().then((response) => {
       setCategories(response);
+      
     });
   }, []);
 

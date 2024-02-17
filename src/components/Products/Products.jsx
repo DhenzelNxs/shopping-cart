@@ -12,17 +12,28 @@ export default function Products() {
   
 
   useEffect(() => {
-    fetchProducts('mais relevantes').then((response) => {
+    fetchProducts('mais relevantes').then((response) => { 
       setProducts(response);
-      setLoading(false);
+      if (response.length > 1){
+        setLoading(false);
+      }else {
+        return;
+      }
+      
     });
   }, []);
 
+  
+
   return (
-    (loading && <Loading /> ) || (
+    (!loading ?   
       <section className="products container">
         {products.map((product) => <ProductCard key={product.id} data={product} />)}
       </section>
+
+      :
+
+      <Loading />
     )
     
   );

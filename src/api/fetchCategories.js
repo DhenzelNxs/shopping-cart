@@ -6,7 +6,7 @@ const fetchCategories = async () => {
 
     return data;
   } catch (error) {
-    return error;
+    return [error];
   }
 
 };

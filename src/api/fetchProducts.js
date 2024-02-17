@@ -6,7 +6,8 @@ const fetchProducts = async (query) => {
 
     return data.results;
   } catch (error) {
-    return error;
+    return [error];
+    
   }
   
 };

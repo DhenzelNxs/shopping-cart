@@ -55,7 +55,7 @@ function ProductCard({ data }) {
       )}
       
       <img
-        src={thumbnail.replace(/\w\.jpg/gi, 'W.jpg')}
+        src={thumbnail?.replace(/\w\.jpg/gi, 'W.jpg')}
         alt="product"
         className="card__image"
       />
