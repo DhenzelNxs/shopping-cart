@@ -16,6 +16,7 @@ function Provider({ children }) {
     Order: Tokens.Order,
     Payment: Tokens.Payment,
     QrCode: Tokens.QrCode,
+    CreditCard: Tokens.CreditCard,
   };
 
   const value = {

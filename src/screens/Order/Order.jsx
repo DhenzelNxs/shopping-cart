@@ -13,6 +13,10 @@ export default function Order() {
     navigate('/qrcode-' + ScreenTokens.QrCode);
   };
 
+  const toCreditCard = () => {
+    navigate('/creditcard-' + ScreenTokens.CreditCard);
+  };
+
   return(
     <section className="order-container">
       <div className="cart-items">
@@ -25,7 +29,7 @@ export default function Order() {
         Formas de Pagamento:
         <div className="payment-info">
           <FaPix className="Payment-icon" size={30} color="#00ffff" onClick={() => toQrCode()}/> PIX
-          <FaRegCreditCard className="Payment-icon" size={30}/> Cartão de Crédito
+          <FaRegCreditCard className="Payment-icon" size={30} onClick={() => toCreditCard()}/> Cartão de Crédito
         </div>
       </div>
 

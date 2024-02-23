@@ -11,6 +11,7 @@ const Tokens = {
   Order: GerarToken(),
   Payment: GerarToken(),
   QrCode: GerarToken(),
+  CreditCard: GerarToken(),
 };
 
 export default Tokens;

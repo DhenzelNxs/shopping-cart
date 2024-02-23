@@ -7,6 +7,7 @@ import Payment from '../../screens/Payment/Payment';
 import { useContext } from 'react';
 import AppContext from '../../context/AppContext';
 import NotFound from '../../screens/NotFound/NotFound';
+import CreditCard from '../../screens/CrediCard/CreditCard';
 
 function AppRouter() {
 
@@ -17,6 +18,7 @@ function AppRouter() {
       <Route path="/" Component={Home}/>
       <Route path={'/order-' + ScreenTokens.Order} Component={Order}/>
       <Route path={'/qrcode-' + ScreenTokens.QrCode} Component={QrCode} />
+      <Route path={'/creditcard-' + ScreenTokens.CreditCard} Component={CreditCard} />
       <Route path={'/payment-' + ScreenTokens.Payment} Component={Payment} />
       <Route path="*" Component={NotFound} />
     </Routes>
